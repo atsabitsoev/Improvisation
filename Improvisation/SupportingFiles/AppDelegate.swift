@@ -13,7 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        ApiService().getMainApiModel { (mainApiModel, errorString) in
+            guard let mainApiModel = mainApiModel else {
+                print(errorString ?? "Неизвестная ошибка")
+                return
+            }
+            print(mainApiModel)
+        }
         return true
     }
 

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -66,8 +66,20 @@
 				6B31FA9E522F2E17A86CAFE9 /* Pods-Improvisation.debug.xcconfig */,
 				117682E81358404557D6D592 /* Pods-Improvisation.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC0740B9252BD3770097F934 /* MainApiModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACD04181252BC33100976462 /* MainApiModel.swift */,
+				ACD04187252BC3A900976462 /* ApiItem.swift */,
+				ACD04184252BC37D00976462 /* ApiItemType.swift */,
+				ACD0418A252BC43700976462 /* HzData.swift */,
+				ACD0418D252BC49D00976462 /* PictureData.swift */,
+				AC7213F7252BCDCD004AFA67 /* SelectorData.swift */,
+			);
+			path = MainApiModel;
 			sourceTree = "<group>";
 		};
 		AC7213FA252BCEC1004AFA67 /* NetworkServices */ = {
@@ -121,12 +133,7 @@
 		ACD0417A252BC1E100976462 /* ApiModels */ = {
 			isa = PBXGroup;
 			children = (
-				ACD04181252BC33100976462 /* MainApiModel.swift */,
-				ACD04187252BC3A900976462 /* ApiItem.swift */,
-				ACD04184252BC37D00976462 /* ApiItemType.swift */,
-				ACD0418A252BC43700976462 /* HzData.swift */,
-				ACD0418D252BC49D00976462 /* PictureData.swift */,
-				AC7213F7252BCDCD004AFA67 /* SelectorData.swift */,
+				AC0740B9252BD3770097F934 /* MainApiModel */,
 			);
 			path = ApiModels;
 			sourceTree = "<group>";

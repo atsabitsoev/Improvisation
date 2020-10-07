@@ -9,7 +9,7 @@ import UIKit
 
 
 protocol SelectorCellDelegate {
-    func selectedVariantChanged(id: Int, text: String)
+    func selectedVariantChanged(item: SelectorCellItem, name: String, indexPathRow: Int)
 }
 
 
@@ -19,6 +19,8 @@ final class SelectorCell: UITableViewCell {
     
     private var item: SelectorCellItem!
     private var selectorCellDelegate: SelectorCellDelegate?
+    private var indexPathRow: Int!
+    private var name: String!
     
     private let segmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl()
@@ -42,9 +44,14 @@ final class SelectorCell: UITableViewCell {
     }
     
     
-    func configure(withItem item: SelectorCellItem, delegate: SelectorCellDelegate) {
+    func configure(name: String,
+                   withItem item: SelectorCellItem,
+                   indexPathRow: Int,
+                   delegate: SelectorCellDelegate) {
         self.item = item
         selectorCellDelegate = delegate
+        self.indexPathRow = indexPathRow
+        self.name = name
         
         let variants = item.variants
         for (index, segment) in variants.enumerated() {
@@ -66,8 +73,8 @@ final class SelectorCell: UITableViewCell {
     
     private func setupSegmentedControlConstraints() {
         NSLayoutConstraint.activate([
-            segmentedControl.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
-            segmentedControl.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
+            segmentedControl.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            segmentedControl.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
             segmentedControl.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             segmentedControl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
         ])
@@ -75,8 +82,9 @@ final class SelectorCell: UITableViewCell {
     
     @objc private func segmentChanged() {
         let selectedIndex = segmentedControl.selectedSegmentIndex
-        let selectedVariant = item.variants[selectedIndex]
-        selectorCellDelegate?.selectedVariantChanged(id: selectedVariant.id, text: selectedVariant.text)
+        let selectedVariantId = item.variants[selectedIndex].id
+        item.selectedId = selectedVariantId
+        selectorCellDelegate?.selectedVariantChanged(item: item, name: name, indexPathRow: indexPathRow)
     }
     
     

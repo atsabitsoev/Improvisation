@@ -62,8 +62,8 @@ final class PictureCell: UITableViewCell {
     
     private func setupHorizontalStackConstraints() {
         NSLayoutConstraint.activate([
-            horizontalStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
-            horizontalStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
+            horizontalStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            horizontalStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
             horizontalStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             horizontalStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
         ])

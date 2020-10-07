@@ -6,7 +6,7 @@
 //
 
 enum CellItem {
-    case hzCellItem(item: HzCellItem)
-    case pictureCellItem(item: PictureCellItem)
-    case selectorCellItem(item: SelectorCellItem)
+    case hzCellItem(name: String, item: HzCellItem)
+    case pictureCellItem(name: String, item: PictureCellItem)
+    case selectorCellItem(name: String, item: SelectorCellItem)
 }

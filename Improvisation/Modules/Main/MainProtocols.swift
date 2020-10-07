@@ -8,5 +8,6 @@
 import Foundation
 
 protocol MainViewDelegate: AnyObject {
-    
+    func alert(title: String, message: String)
+    func setNewItems(_ items: [CellItem])
 }

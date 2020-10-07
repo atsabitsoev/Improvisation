@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SelectorCellItem: CellItem {
+struct SelectorCellItem {
     
     struct SelectorVariantItem {
         var id: Int

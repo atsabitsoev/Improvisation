@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct HzCellItem: CellItem {
+struct HzCellItem {
     var text: String
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PictureCellItem: CellItem {
+struct PictureCellItem {
     var text: String
     var url: String
 }

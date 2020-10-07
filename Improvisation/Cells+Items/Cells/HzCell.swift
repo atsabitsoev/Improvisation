@@ -47,8 +47,8 @@ final class HzCell: UITableViewCell {
     
     private func setupLabelConstraints() {
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
-            label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
+            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
             label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
         ])

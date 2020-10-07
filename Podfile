@@ -7,5 +7,6 @@ target 'Improvisation' do
 
   # Pods for Improvisation
   pod 'Alamofire'
+  pod 'SDWebImage'
 
 end

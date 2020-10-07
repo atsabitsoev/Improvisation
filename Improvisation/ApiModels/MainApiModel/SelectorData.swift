@@ -9,11 +9,13 @@ import Foundation
 
 
 struct SelectorData: Decodable {
+    
+    struct SelectorVariant: Decodable {
+        var id: Int
+        var text: String
+    }
+    
+    
     var selectedId: Int
     var variants: [SelectorVariant]
-}
-
-struct SelectorVariant: Decodable {
-    var id: Int
-    var text: String
 }

@@ -8,7 +8,7 @@
 import Alamofire
 
 
-final class ApiService {
+final class ApiService: ApiServiceProtocol {
     
     func getMainApiModel(_ handler: @escaping (MainApiModel?, String?) -> ()) {
         

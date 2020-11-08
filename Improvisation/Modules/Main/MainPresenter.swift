@@ -18,7 +18,6 @@ final class MainPresenter {
     }
     
     func viewDidLoad() {
-        
         fetchMainApiModel()
     }
     
